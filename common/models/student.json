@@ -1,0 +1,34 @@
+{
+  "name": "Student",
+  "plural": "Students",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "age": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "subjects": {
+      "type": "hasAndBelongsToMany",
+      "model": "Subject",
+      "throughTable": "StudentSubject"
+    },
+    "address": {
+      "type": "hasOne",
+      "model": "Address",
+      "foreignKey": "studentId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Teacher",
+  "plural": "Teachers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "old": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "students": {
+      "type": "hasMany",
+      "model": "Student",
+      "foreignKey": "teacherId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

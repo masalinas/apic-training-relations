@@ -1,0 +1,33 @@
+{
+  "name": "Subject",
+  "plural": "Subjects",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "hours": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "students": {
+      "type": "hasAndBelongsToMany",
+      "model": "Student",
+      "throughTable": "StudentSubject"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

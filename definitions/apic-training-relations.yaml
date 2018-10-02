@@ -1,0 +1,1542 @@
+paths:
+  /Students:
+    post:
+      tags:
+        - Student
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Student.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Student'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+    put:
+      tags:
+        - Student
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Student.upsert__put_Students
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Student'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+    patch:
+      tags:
+        - Student
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Student.upsert__patch_Students
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Student'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+    get:
+      tags:
+        - Student
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Student.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Student'
+      deprecated: false
+  /Students/replaceOrCreate:
+    post:
+      tags:
+        - Student
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Student.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Student'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+  /Students/upsertWithWhere:
+    post:
+      tags:
+        - Student
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Student.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Student'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+  '/Students/{id}/exists':
+    get:
+      tags:
+        - Student
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Student.exists__get_Students_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Students/{id}':
+    head:
+      tags:
+        - Student
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Student.exists__head_Students_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Student
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Student.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+    delete:
+      tags:
+        - Student
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Student.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Student
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Student.prototype.updateAttributes__put_Students_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Student'
+        - name: id
+          in: path
+          description: Student id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+    patch:
+      tags:
+        - Student
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Student.prototype.updateAttributes__patch_Students_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Student'
+        - name: id
+          in: path
+          description: Student id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+  '/Students/{id}/replace':
+    post:
+      tags:
+        - Student
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Student.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Student'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+  /Students/findOne:
+    get:
+      tags:
+        - Student
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Student.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Student'
+      deprecated: false
+  /Students/update:
+    post:
+      tags:
+        - Student
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Student.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Student'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Students/count:
+    get:
+      tags:
+        - Student
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Student.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Teachers:
+    post:
+      tags:
+        - Teacher
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Teacher.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Teacher'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+    put:
+      tags:
+        - Teacher
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Teacher.upsert__put_Teachers
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Teacher'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+    patch:
+      tags:
+        - Teacher
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Teacher.upsert__patch_Teachers
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Teacher'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+    get:
+      tags:
+        - Teacher
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Teacher.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Teacher'
+      deprecated: false
+  /Teachers/replaceOrCreate:
+    post:
+      tags:
+        - Teacher
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Teacher.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Teacher'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+  /Teachers/upsertWithWhere:
+    post:
+      tags:
+        - Teacher
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Teacher.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Teacher'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+  '/Teachers/{id}/exists':
+    get:
+      tags:
+        - Teacher
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Teacher.exists__get_Teachers_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Teachers/{id}':
+    head:
+      tags:
+        - Teacher
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Teacher.exists__head_Teachers_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Teacher
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Teacher.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+    delete:
+      tags:
+        - Teacher
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Teacher.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Teacher
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Teacher.prototype.updateAttributes__put_Teachers_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Teacher'
+        - name: id
+          in: path
+          description: Teacher id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+    patch:
+      tags:
+        - Teacher
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Teacher.prototype.updateAttributes__patch_Teachers_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Teacher'
+        - name: id
+          in: path
+          description: Teacher id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+  '/Teachers/{id}/replace':
+    post:
+      tags:
+        - Teacher
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Teacher.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Teacher'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+  /Teachers/findOne:
+    get:
+      tags:
+        - Teacher
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Teacher.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Teacher'
+      deprecated: false
+  /Teachers/update:
+    post:
+      tags:
+        - Teacher
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Teacher.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Teacher'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Teachers/count:
+    get:
+      tags:
+        - Teacher
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Teacher.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Subjects:
+    post:
+      tags:
+        - Subject
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Subject.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Subject'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+    put:
+      tags:
+        - Subject
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Subject.upsert__put_Subjects
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Subject'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+    patch:
+      tags:
+        - Subject
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Subject.upsert__patch_Subjects
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Subject'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+    get:
+      tags:
+        - Subject
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Subject.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Subject'
+      deprecated: false
+  /Subjects/replaceOrCreate:
+    post:
+      tags:
+        - Subject
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Subject.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Subject'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+  /Subjects/upsertWithWhere:
+    post:
+      tags:
+        - Subject
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Subject.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Subject'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+  '/Subjects/{id}/exists':
+    get:
+      tags:
+        - Subject
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Subject.exists__get_Subjects_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Subjects/{id}':
+    head:
+      tags:
+        - Subject
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Subject.exists__head_Subjects_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Subject
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Subject.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+    delete:
+      tags:
+        - Subject
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Subject.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Subject
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Subject.prototype.updateAttributes__put_Subjects_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Subject'
+        - name: id
+          in: path
+          description: Subject id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+    patch:
+      tags:
+        - Subject
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Subject.prototype.updateAttributes__patch_Subjects_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Subject'
+        - name: id
+          in: path
+          description: Subject id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+  '/Subjects/{id}/replace':
+    post:
+      tags:
+        - Subject
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Subject.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Subject'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+  /Subjects/findOne:
+    get:
+      tags:
+        - Subject
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Subject.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Subject'
+      deprecated: false
+  /Subjects/update:
+    post:
+      tags:
+        - Subject
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Subject.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Subject'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Subjects/count:
+    get:
+      tags:
+        - Subject
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Subject.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Addresses:
+    post:
+      tags:
+        - Address
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Address.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    put:
+      tags:
+        - Address
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Address.upsert__put_Addresses
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    patch:
+      tags:
+        - Address
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Address.upsert__patch_Addresses
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    get:
+      tags:
+        - Address
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Address.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Address'
+      deprecated: false
+  /Addresses/replaceOrCreate:
+    post:
+      tags:
+        - Address
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Address.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  /Addresses/upsertWithWhere:
+    post:
+      tags:
+        - Address
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Address.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  '/Addresses/{id}/exists':
+    get:
+      tags:
+        - Address
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Address.exists__get_Addresses_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Addresses/{id}':
+    head:
+      tags:
+        - Address
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Address.exists__head_Addresses_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Address
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Address.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    delete:
+      tags:
+        - Address
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Address.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Address
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Address.prototype.updateAttributes__put_Addresses_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Address'
+        - name: id
+          in: path
+          description: Address id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    patch:
+      tags:
+        - Address
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Address.prototype.updateAttributes__patch_Addresses_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Address'
+        - name: id
+          in: path
+          description: Address id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  '/Addresses/{id}/replace':
+    post:
+      tags:
+        - Address
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Address.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  /Addresses/findOne:
+    get:
+      tags:
+        - Address
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Address.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  /Addresses/update:
+    post:
+      tags:
+        - Address
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Address.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Addresses/count:
+    get:
+      tags:
+        - Address
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Address.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  Student:
+    properties:
+      name:
+        type: string
+      age:
+        type: number
+        format: double
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+      - age
+    additionalProperties: false
+  x-any:
+    properties: {}
+  Teacher:
+    properties:
+      name:
+        type: string
+      old:
+        type: number
+        format: double
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+    additionalProperties: false
+  Subject:
+    properties:
+      code:
+        type: string
+      description:
+        type: string
+      hours:
+        type: number
+        format: double
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - code
+      - description
+      - hours
+    additionalProperties: false
+  Address:
+    properties:
+      name:
+        type: string
+      portal:
+        type: number
+        format: double
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+      - portal
+    additionalProperties: false
+  ObjectID:
+    type: string
+    pattern: "^[a-fA-F\\d]{24}$"
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: apic-training-relations
+  version: 1.0.0
+  title: apic-training-relations
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
